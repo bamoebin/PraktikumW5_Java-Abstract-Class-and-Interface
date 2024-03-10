@@ -30,6 +30,7 @@ public class StoreDriver {
         // initialize them to 0.
         int managerCount = 0;
         int salesAssociateCount = 0;
+        int cashierCount = 0;
 
         // 2. Declare & initialize an object for PrintWriter class and use the file name
         // "outputFile.txt" to write the corresponding data
@@ -41,7 +42,7 @@ public class StoreDriver {
         // initialize the object as an ArrayList.
 
         sc.useLocale(Locale.ENGLISH); // Set locale to English AGAR MENJADIKAN DESIMAL MEMAKAI TITIK BUKAN KOMA
-
+        List<Cashier> CashierList = new ArrayList<Cashier>();
         List<Manager> managerList = new ArrayList<Manager>();
         // 5. Declare and initialize a List object of type SalesAssociate as
         // "salesAssociateList", and initialize the object as an ArrayList.
@@ -82,6 +83,16 @@ public class StoreDriver {
                     sc.nextLine();
                 }
                 managerList.add(manager);
+
+            } else if (employeeType.equals("Cashier")) {
+                double TheirOvertime = sc.nextDouble();
+
+                Cashier newCashier = new Cashier(numberOfHoursWorked, hourlyRate, storeDetails, basePay, empName,
+                        TheirOvertime);
+                CashierList.add(newCashier);
+                if (sc.hasNext()) {
+                    sc.nextLine();
+                }
 
             } else {
                 double salesRate = sc.nextDouble();
@@ -138,7 +149,12 @@ public class StoreDriver {
             } else {
                 System.out.println("No, he needs to work harder\n");
             }
-
+            System.out.print("Is " + manager.getEmployeeName() + " should be fired ? ");
+            if (manager.fired() == true) {
+                System.out.println("Yes, he/she is.\n");
+            } else {
+                System.out.println("No, we still need him/her\n");
+            }
         }
 
         // For Loop ends here
@@ -177,8 +193,44 @@ public class StoreDriver {
             } else {
                 System.out.println("No, he/she needs to work harder\n");
             }
+            System.out.print("Is " + salesAssociate.getEmployeeName() + " should be fired ? ");
+            if (salesAssociate.fired() == true) {
+                System.out.println("Yes, he/she is.\n");
+            } else {
+                System.out.println("No, we still need him/her\n");
+            }
 
         }
+
+        System.out.println("******************************************************");
+        System.out.println("Number of employees working as CASHIERS are: " + CashierList.size());
+        System.out.println("******************************************************");
+        pwd.println("******************************************************");
+        pwd.println("Number of employees working as CHASIERS are: " + CashierList.size());
+        pwd.println("******************************************************");
+
+        for (Cashier newCashier : CashierList) {
+            cashierCount++;
+            System.out.println(cashierCount + ". Cashier Details:");
+            System.out.println(newCashier);
+            pwd.println(newCashier);
+            pwd.println("Gross Payment: $" + newCashier.calculatePay());
+            System.out.println("Gross Payment: $" + newCashier.calculatePay());
+            System.out.print("Is " + newCashier.getEmployeeName() + " eligible for promotion? ");
+            if (newCashier.checkPromotionEligibility() == true) {
+                System.out.println("Yes, he/she is eligible\n");
+            } else {
+                System.out.println("No, he/she needs to work harder\n");
+            }
+            System.out.print("Is " + newCashier.getEmployeeName() + " should be fired ? ");
+            if (newCashier.fired() == true) {
+                System.out.println("Yes, he/she is.\n");
+            } else {
+                System.out.println("No, we still need him/her\n");
+            }
+
+        }
+
         pwd.close();
         // For loop ends after this
     }

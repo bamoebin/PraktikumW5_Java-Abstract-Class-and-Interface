@@ -26,6 +26,11 @@ public interface Employee {
      */
     boolean checkPromotionEligibility();
 
+    /**
+     * 
+     * @return- boolean apakah iya atau tidak dipecat
+     */
+    boolean fired();
     
 
 }

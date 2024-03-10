@@ -171,6 +171,10 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
         this.storeDetails = storeDetails;
     }
 
+    public String getStoreDetails(){
+        return this.storeDetails;
+    }
+
     /**
      * Returns private variable are separated by one space.
      *
@@ -184,4 +188,13 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
                 + "\nPayment Rate per hour: $" + hourlyRate + "/hr\n";
     }
 
+    @Override
+    public boolean bankrupt(double storeSales){
+        if (calculateRemainingStoreRevenue(storeSales) < 10000.0){
+            return true;
+        }
+        return false;
+    }
+
+    public abstract double bonusHour(int bonus);
 }

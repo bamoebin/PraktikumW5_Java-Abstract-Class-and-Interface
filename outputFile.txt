@@ -1,25 +1,46 @@
 ******************************************************
-Number of employees working as MANAGER are: 1
+Number of employees working as MANAGER are: 2
 ******************************************************
 1. Manager Details:
 Store Details: Main Store
 Employee Name: Rash Patel
 Base Pay: $120.75
-Number of Hours worked: 12.0hrs
-Payment Rate per hour: $100.0/hr
-Total Sales in store: $2000.0
+Number of Hours worked: 240.0hrs
+Payment Rate per hour: $10.0/hr
+Total Sales in store: $20000.0
 Sales done: $1222.0
-Percentage of sales done: 61,10%
-Gross Payment: $1334,0
-Remaining store revenue: $382.182075
+Percentage of sales done: 6,11%
+Gross Payment: $2586,0
+Remaining store revenue: $14467.902075
+2. Manager Details:
+Store Details: Retail Store
+Employee Name: Ziyad Patel
+Base Pay: $120.75
+Number of Hours worked: 12.0hrs
+Payment Rate per hour: $10.0/hr
+Total Sales in store: $20000.0
+Sales done: $1222.0
+Percentage of sales done: 6,11%
+Gross Payment: $243,2
+Remaining store revenue: $16787.274074999998
 ******************************************************
 Number of employees working as SALES ASSOCIATES are: 1
 ******************************************************
-Store Details: Store Detail
+Store Details: Store Retail
 Employee Name: Khan
-Base Pay: $120000.0
-Number of Hours worked: 28.0hrs
+Base Pay: $99.0
+Number of Hours worked: 24.0hrs
 Payment Rate per hour: $10.0/hr
-Sales Rate: 11100.0%
-Total commission: $12000.0
-Gross Payment: $132280.0
+Sales Rate: 9900.0%
+Total commission: $9.9
+Gross Payment: $348.9
+******************************************************
+Number of employees working as CHASIERS are: 1
+******************************************************
+Store Details: Main Store
+Employee Name: Hahay
+Base Pay: $95.0
+Number of Hours worked: 240.0hrs
+Payment Rate per hour: $40.0/hr
+Overtime hours : 20.0 hour/s
+Gross Payment: $975.0

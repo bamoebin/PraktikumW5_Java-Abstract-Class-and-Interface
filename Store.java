@@ -35,4 +35,6 @@ public interface Store {
      */
     public double calculateRemainingStoreRevenue(double storeSales);
 
+    public boolean bankrupt(double storeSales);
+
 }

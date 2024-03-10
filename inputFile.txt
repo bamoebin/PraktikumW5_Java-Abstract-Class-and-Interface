@@ -2,14 +2,29 @@ Manager
 Main Store
 Rash Patel
 120.75
-12
-100
-1222
-2000
-Sales Associate
-Store Detail
-Khan
-120000
-28
+240
 10
-111
+1222
+20000
+Sales Associate
+Store Retail
+Khan
+99
+24
+10
+99
+Cashier
+Main Store
+Hahay
+95.0
+240
+40
+20
+Manager
+Retail Store
+Ziyad Patel
+120.75
+12
+10
+1222
+20000

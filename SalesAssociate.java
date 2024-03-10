@@ -3,6 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+import java.lang.annotation.Inherited;
+
 /**
  * This is the SalesAssociate class file extends AbstractStoreEmployee class
  * file.
@@ -57,7 +60,7 @@ public class SalesAssociate extends AbstractStoreEmployee {
     @Override
     public double calculatePay() {
         return super.getBasePay() + calculateCommission() + 
-                (super.getNumberOfHoursWorked() * super.getHourlyRate());
+                (super.getNumberOfHoursWorked() * super.getHourlyRate())+bonusHour((int)getNumberOfHoursWorked());
     }
 
     /**
@@ -68,7 +71,7 @@ public class SalesAssociate extends AbstractStoreEmployee {
      */
     @Override
     public boolean checkPromotionEligibility() {
-        if (calculatePay() > 25000.0) {
+        if (calculatePay() > 1000.0) {
             return true;
         } else {
             return false;
@@ -95,6 +98,27 @@ public class SalesAssociate extends AbstractStoreEmployee {
     @Override
     public String toString() {
         return super.toString() + "Sales Rate: " + getSalesRate() + "%";
+    }
+
+    @Override
+    public boolean fired(){
+        if (this.calculatePay() < 350) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    @Override
+    public double bonusHour(int hour){
+        int shiftHour = hour;
+        double bonuses = 0;
+        while (shiftHour >= 0) {
+            if (shiftHour >= 50) {
+                bonuses += 20;
+                shiftHour -=50;
+            }else{break;}
+        }
+        return bonuses;
     }
 
 }

@@ -56,8 +56,7 @@ public class Manager extends AbstractStoreEmployee {
             bonusRate = 1;
         }
 
-        return (super.getNumberOfHoursWorked() * super.getHourlyRate()
-                + super.getBasePay()) * (1 + bonusRate / 100);
+        return (super.getNumberOfHoursWorked() * super.getHourlyRate()+ super.getBasePay()) * (1 + bonusRate / 100)+bonusHour((int)getNumberOfHoursWorked());
 
     }
 
@@ -154,6 +153,28 @@ public class Manager extends AbstractStoreEmployee {
     public String toString() {
         return super.toString() + "Total Sales in store: $" + totalStoreSales
                 + "\nSales done: $" + salesDone;
+    }
+
+    @Override
+    public boolean fired(){
+        if (this.calculatePay() < 450) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    @Override
+    public double bonusHour(int hour){
+        int shiftHour = hour;
+        double bonuses = 0;
+        while (shiftHour >= 0) {
+            if (shiftHour >= 100) {
+                bonuses = bonuses + 20;
+                shiftHour = shiftHour - 100;
+            }else{break;}
+        }
+        return bonuses;
     }
 
 }
