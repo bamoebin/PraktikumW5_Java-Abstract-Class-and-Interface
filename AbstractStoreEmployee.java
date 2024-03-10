@@ -12,7 +12,7 @@
 public abstract class AbstractStoreEmployee implements Employee, Store {
 
     private double basePay;
-    String employeeName;
+    private String employeeName;
     private double hourlyRate;
     private double numberOfHoursWorked;
     private String storeDetails;
