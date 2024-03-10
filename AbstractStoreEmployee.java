@@ -30,8 +30,7 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
      * passed.
      * @param employeeName - The parameter Full name of the Employee is passed.
      */
-    public AbstractStoreEmployee(double numberOfHoursWorked, double hourlyRate, String storeDetails,
-            double basePay, String employeeName) {
+    public AbstractStoreEmployee(double numberOfHoursWorked, double hourlyRate, String storeDetails,double basePay, String employeeName) {
         this.numberOfHoursWorked = numberOfHoursWorked;
         this.hourlyRate = hourlyRate;
         this.storeDetails = storeDetails;

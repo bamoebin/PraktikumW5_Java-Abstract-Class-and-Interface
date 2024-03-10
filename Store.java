@@ -35,6 +35,11 @@ public interface Store {
      */
     public double calculateRemainingStoreRevenue(double storeSales);
 
+    /**
+     * 
+     * @param storeSales
+     * @return - Memberitahu apakah Store ini memenuhi syarat dikatakan bankrupt atau tidak
+     */
     public boolean bankrupt(double storeSales);
 
 }
