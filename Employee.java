@@ -3,8 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package store;
-
 /**
  * This is the Employee interface file.
  *
@@ -27,5 +25,7 @@ public interface Employee {
      * promotion. for an employee.
      */
     boolean checkPromotionEligibility();
+
+    
 
 }

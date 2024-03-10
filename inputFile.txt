@@ -1,0 +1,15 @@
+Manager
+Main Store
+Rash Patel
+120.75
+12
+100
+1222
+2000
+Sales Associate
+Store Detail
+Khan
+120000
+28
+10
+111
